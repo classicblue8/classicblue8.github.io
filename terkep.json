@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"style": {"cell": {"stroke": "transparent"}}},
+  "title": {
+    "font": "Arial",
+    "text": "Fogyasztás, termelés és egyéb mutatószámok",
+    "subtitle": ["Forrás: brewersofeurope.eu", ""],
+    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFont": "Arial",
+    "subtitleFontWeight": "lighter"
+  },
+  "width": 600,
+  "height": 500,
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/e4e/ch8_Trends/data/chart8_x_europe.topojson",
+    "format": {"type": "topojson", "feature": "europe"}
+  },
+  "transform": [
+    {
+      "lookup": "id",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/classicblue8/classicblue8.github.io/main/adatbazis.csv",
+          "format": {"type": "csv"}
+        },
+        "key": "id",
+        "fields": [
+          "Employment",
+          "Consumption",
+          "Production",
+          "Cons_Capita","Nr_Breweries", "Excise_Duty",
+          "Year"
+        ]
+      }
+    },
+    {"filter": "datum.Year == 2022"},
+    {"calculate": "datum[metric]", "as": "selectedMetric"}
+  ],
+  "params": [
+    {
+      "name": "metric",
+      "value": "Employment",
+      "bind": {
+        "input": "select",
+        "options": ["Employment", "Consumption", "Production", "Cons_Capita","Nr_Breweries", "Excise_Duty"],
+        "name": "Metric: "
+      }
+    }
+  ],
+  "mark": {"type": "geoshape", "strokeWidth": 0.3, "stroke": "rgba(0,0,0,0.3)"},
+  "encoding": {
+    "color": {
+      "legend": {"title": null},
+      "field": "selectedMetric",
+      "scale": {
+        "range": [
+          "rgb(111, 181, 219)",
+          "rgb(73, 191, 161)",
+          "rgb(230, 189, 81)",
+          "rgb(235, 61, 75)"
+        ]
+      },
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {"field": "id", "title": "ID"},
+      {"field": "selectedMetric", "title": "Data"},
+      {"field": "Year"}
+    ]
+  },
+  "autosize": {"type": "pad", "contains": "padding", "resize": false}
+}

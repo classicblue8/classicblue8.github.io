@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/classicblue8/classicblue8.github.io/main/adatbazis.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {"type": "bar", "stack": "normalize"},
+    "encoding": {
+      "y": {
+        "field": "id",
+        "type": "ordinal",
+        "title": "Country",
+        "sort": {"field": "OFF_TRADE", "op": "sum", "order": "descending"}
+      },
+      "x": {"aggregate": "sum", "field": "value", "title": "Percentage"},
+      "color": {
+        "field": "variable",
+        "type": "nominal",
+        "scale": {"range": ["#1f77b4", "#ff7f0e"]},
+        "legend": {"title": "Type of Trade"}
+      },
+      "tooltip": [
+        {"field": "id", "title": "Country"},
+        {"field": "sum_value", "title": "Percentage"}
+      ]
+    },
+    "transform": [
+      {"fold": ["ON_TRADE", "OFF_TRADE"], "as": ["variable", "value"]}
+    ],
+    "title": {
+      "text": "Distribution of On-Trade and Off-Trade",
+      "subtitle": "Percentage of Total for Each Country",
+      "subtitleFont": "Arial",
+      "subtitleFontSize": 12
+    },
+    "width": 600,
+    "height": 400
+  }
+  

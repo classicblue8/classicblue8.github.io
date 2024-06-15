@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/classicblue8/classicblue8.github.io/main/adatbazis.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {"type": "bar", "stack": "normalize"},
+    "encoding": {
+      "x": {"field": "id", "type": "ordinal", "title": "Ország", "sort": {"field": "value", "op": "sum", "order": "descending"}},
+      "y": {"aggregate": "sum", "field": "value", "title": "Mennyiség"},
+      "color": {
+        "field": "variable",
+        "type": "nominal",
+        "scale": {"range": ["#1f77b4", "#ff7f0e"]},
+        "legend": {"title": "Import"}
+      },
+      "tooltip": [
+        {"field": "id", "title": "Ország"},
+        {"field": "variable", "title": "Import"},
+        {"field": "sum_value", "title": "Mennyiség"}
+      ]
+    },
+    "transform": [
+      {"fold": ["INTRA_EU_IMP", "EXTRA_EU_IMP"], "as": ["variable", "value"]}
+    ],
+    "title": {
+      "text": "Összes import 2022-ben",
+      "subtitle": "Intra-EU és Extra-EU 1000 hektoliterben (HL) kifejezve",
+      "subtitleFont": "Arial",
+      "subtitleFontSize": 12
+    },
+    "width": 600,
+    "height": 400
+  }
+  
