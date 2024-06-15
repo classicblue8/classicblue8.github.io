@@ -16,7 +16,7 @@
           "Cons_Capita",
           "Nr_Breweries",
           "Excise_Duty"],
-        "name": "X Axis: "
+        "name": "X tengely: "
       }
     },
     {
@@ -30,7 +30,7 @@
           "Cons_Capita",
           "Nr_Breweries",
           "Excise_Duty"],
-        "name": "Y Axis: "
+        "name": "Y tengely: "
       }
     }
   ],
@@ -68,12 +68,11 @@
     "text": {"field": "id", "type": "nominal"}
   },
   "title": {
-    "text": "Scatter Plot of Selected Metrics in 2022",
-    "subtitle": "Data directly from the brewing companies",
+    "text": "A kiválasztott mutatók szórásdiagramja 2022-ben",
     "subtitleFont": "Arial",
     "subtitleFontWeight": "lighter"
   },
-  "width": 600,
-  "height": 400,
+  "width": 700,
+  "height": 500,
   "config": {"view": {"stroke": "transparent"}}
 }

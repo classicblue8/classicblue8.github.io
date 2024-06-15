@@ -18,7 +18,7 @@
             "Nr_Breweries",
             "Excise_Duty"
           ],
-          "name": "Y Axis: "
+          "name": "Y tengely: "
         }
       },
       {
@@ -29,7 +29,7 @@
           "options": [
             "AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","NO","CH","GB"
           ],
-          "name": "Highlight Country: "
+          "name": "Kiemelt ország: "
         }
       }
     ],
@@ -67,12 +67,12 @@
       ]
     },
     "title": {
-      "text": "Line Chart of Selected Metric by Year",
-      "subtitle": "Each line represents a different country",
+      "text": "A kiválasztott mérőszámok vonaldiagramja 2016-2022 között",
+      "subtitle": "Minden vonal egy másik országot jelöl",
       "subtitleFont": "Arial",
       "subtitleFontWeight": "lighter"
     },
-    "width": 800,
+    "width": 700,
     "height": 500,
     "config": {"view": {"stroke": "transparent"}}
   }

@@ -24,12 +24,12 @@
       {"fold": ["INTRA_EU_EXP", "EXTRA_EU_EXP"], "as": ["variable", "value"]}
     ],
     "title": {
-      "text": "Distribution of INTRA_EU_EXP and EXTRA_EU_EXP by ID",
-      "subtitle": "Percentage of Total for Each ID",
+      "text": "Összes export 2022-ben",
+      "subtitle": "Intra-EU és Extra-EU 1000 hektoliterben (HL) kifejezve",
       "subtitleFont": "Arial",
       "subtitleFontSize": 12
     },
-    "width": 600,
-    "height": 400
+    "width": 586,
+    "height": 500
   }
   

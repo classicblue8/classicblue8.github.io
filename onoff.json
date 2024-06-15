@@ -28,12 +28,12 @@
       {"fold": ["ON_TRADE", "OFF_TRADE"], "as": ["variable", "value"]}
     ],
     "title": {
-      "text": "Distribution of On-Trade and Off-Trade",
-      "subtitle": "Percentage of Total for Each Country",
+      "text": "On-Trade és Off-Trade megoszlása",
+      "subtitle": "Az összes ország százalékos aránya",
       "subtitleFont": "Arial",
       "subtitleFontSize": 12
     },
-    "width": 600,
-    "height": 400
+    "width": 620,
+    "height": 500
   }
   

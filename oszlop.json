@@ -18,7 +18,7 @@
           "Nr_Breweries",
           "Excise_Duty"
         ],
-        "name": "Select Metric: "
+        "name": "Adat: "
       }
     },
     {
@@ -27,7 +27,7 @@
       "bind": {
         "input": "select",
         "options": [2016, 2017, 2018, 2019, 2020, 2021, 2022],
-        "name": "Select Year: "
+        "name": "Év: "
       }
     },
     {"name": "xTitle", "value": "Consumption", "expr": "selectedMetric"}
@@ -63,12 +63,12 @@
     ]
   },
   "title": {
-    "text": "Választható adatok oszlopdiagram",
+    "text": "A kiválasztott mutatók oszlopdiagramja",
     "subtitle": "brewersofeurope.eu",
     "subtitleFont": "Arial",
     "subtitleFontWeight": "lighter"
   },
-  "width": 600,
-  "height": 400,
+  "width": 710,
+  "height": 500,
   "config": {"view": {"stroke": "transparent"}}
 }

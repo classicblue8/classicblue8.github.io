@@ -3,14 +3,13 @@
   "config": {"style": {"cell": {"stroke": "transparent"}}},
   "title": {
     "font": "Arial",
-    "text": "Fogyasztás, termelés és egyéb mutatószámok",
-    "subtitle": ["Forrás: brewersofeurope.eu", ""],
+    "text": "Sörtermelés, fogyasztás és egyéb adatok országonkénti bontásban 2022",
     "anchor": "start",
     "fontSize": 16,
     "subtitleFont": "Arial",
     "subtitleFontWeight": "lighter"
   },
-  "width": 600,
+  "width": 750,
   "height": 500,
   "projection": {"type": "equalEarth"},
   "data": {
@@ -45,7 +44,7 @@
       "bind": {
         "input": "select",
         "options": ["Employment", "Consumption", "Production", "Cons_Capita","Nr_Breweries", "Excise_Duty"],
-        "name": "Metric: "
+        "name": "Adat kiválasztása: "
       }
     }
   ],
@@ -70,5 +69,5 @@
       {"field": "Year"}
     ]
   },
-  "autosize": {"type": "pad", "contains": "padding", "resize": false}
+  "autosize": {"type": "fit-x", "contains": "padding", "resize": false}
 }
