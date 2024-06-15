@@ -1,4 +1,4 @@
-Country,ID,Year,Production,Consumption,Cons_Capita,Nr_Breweries,Employment,Excise_Duty,ON_TRADE,OFF_TRADE,INTRA_EU_IMP,EXTRA_EU_IMP,INTRA_EU_EXP,EXTRA_EU_EXP
+Country,id,Year,Production,Consumption,Cons_Capita,Nr_Breweries,Employment,Excise_Duty,ON_TRADE,OFF_TRADE,INTRA_EU_IMP,EXTRA_EU_IMP,INTRA_EU_EXP,EXTRA_EU_EXP
 AUSTRIA,AT,2016,9227,9030,106,235,3800,196.00,,,,,,
 AUSTRIA,AT,2017,9312,8984,105,273,3800,192.00,,,,,,
 AUSTRIA,AT,2018,9472,9190,107,298,3700,200.00,,,,,,
