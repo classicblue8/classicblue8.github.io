@@ -42,7 +42,7 @@
     "y": {
       "field": "id",
       "type": "nominal",
-      "title": "Country",
+      "title": "Ország",
       "sort": {"field": "metricValue", "order": "descending"}
     },
     "x": {
@@ -57,9 +57,9 @@
       "legend": null
     },
     "tooltip": [
-      {"field": "id", "title": "Country"},
+      {"field": "id", "title": "Ország"},
       {"field": "metricValue", "title": {"text": "Mennyiség"}},
-      {"field": "Year", "title": "Year"}
+      {"field": "Year", "title": "Év"}
     ]
   },
   "title": {

@@ -11,7 +11,7 @@
       "color": {
         "field": "variable",
         "type": "nominal",
-        "scale": {"range": ["#1f77b4", "#ff7f0e"]},
+        "scale": {"range": ["#0096FF", "#ff5722"]},
         "legend": {"title": "Import"}
       },
       "tooltip": [

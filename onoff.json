@@ -9,26 +9,26 @@
       "y": {
         "field": "id",
         "type": "ordinal",
-        "title": "Country",
+        "title": "Ország",
         "sort": {"field": "OFF_TRADE", "op": "sum", "order": "descending"}
       },
-      "x": {"aggregate": "sum", "field": "value", "title": "Percentage"},
+      "x": {"aggregate": "sum", "field": "value", "title": "Százalék"},
       "color": {
         "field": "variable",
         "type": "nominal",
-        "scale": {"range": ["#1f77b4", "#ff7f0e"]},
+        "scale": {"range": ["#0096FF", "#ff5722"]},
         "legend": {"title": "Type of Trade"}
       },
       "tooltip": [
-        {"field": "id", "title": "Country"},
-        {"field": "sum_value", "title": "Percentage"}
+        {"field": "id", "title": "Ország"},
+        {"field": "sum_value", "title": "Százalék"}
       ]
     },
     "transform": [
       {"fold": ["ON_TRADE", "OFF_TRADE"], "as": ["variable", "value"]}
     ],
     "title": {
-      "text": "On-Trade és Off-Trade megoszlása",
+      "text": "On-Trade és Off-Trade megoszlása 2022",
       "subtitle": "Az összes ország százalékos aránya",
       "subtitleFont": "Arial",
       "subtitleFontSize": 12

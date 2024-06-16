@@ -37,23 +37,38 @@
 <!-- The body tag contains the elements that visitors to our page will see. -->
     <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
         <!-- This is a header, it is the largest text on the page -->
-        A sör Európában
+        Európai sörtrendek
     </h1>
     <p style="margin-top: 0px; color: darkblue">
         <!-- we're setting the margin to 0px so the header and authour name are close together -->
         Ördög Krisztián
     </p>
     <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-        A projekt célja az európai sörtrendek elemzése és bemutatása a legfrissebb statisztikai adatok alapján. Ez magában foglalja a sörtermelés, fogyasztás, export-import, és a sörfőzdék számának alakulását az elmúlt években, különös tekintettel a 2022-es évre.
+        A projekt célja az európai sörtrendek elemzése és bemutatása a legfrissebb statisztikai adatok alapján. Ez magában foglalja a sörtermelés, fogyasztás, fogyasztás/fő, export-import, jövedéki adók és a sörfőzdék számának alakulását 2016 és 2022 között, különös tekintettel a 2022-es évre.
     </h3>
 
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
     <section>
         <div class="chart-description">
-            <h2>Section A: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using the basic chart from the previous session.
+            <h2>Felhasznált adatok</h2>
+            <p> <ul>
+                <li>Sörtermelés és fogyasztás országonkénti bontásban 2016-2022 (1000 hektoliter)</li>
+                <li>Fejenkénti sörfogyasztás 2016-2022 (liter)</li>
+                <li>On-trade (helyszíni fogyasztás) és off-trade (bolti értékesítés) arányok 2016-2022</li>
+                <li>Sör import és export adatok EU-n kívül és belül 2022 (1000 hektoliter)</li>
+                <li>Aktív sörfőzdék száma 2016-2022</li>
+                <li>Közvetlen foglalkoztatás a söriparban 2016-2022 </li>
+                <li>Adóbevételek a söriparból 2016-2022 (millió euró)</li>
+              </ul>
+              Adatok forrása: https://brewersofeurope.eu/
+            </p>
+            <p>
+                Az adatok bemutatják az európai söripar alakulását 2016 és 2022 között. Az import és export adatok rámutatnak az európai 
+                sörök nemzetközi piacra gyakorolt hatásaira, míg a sörfőzdék számának növekedése a sörpiac dinamikus változását és a kézműves
+                 sörök iránti keresletet mutatja. Az on-trade és off-trade arányok pedig a fogyasztói szokások változását tükrözik.
+            </p>
+            <p>
+                A projekt hasznos lehet sörkedvelőknek, az iparág iránt érdeklődőknek, amely által megérthetik a söripar jelenlegi helyzetét, a piaci trendeket, valamint a sörfogyasztási szokások és termelési adatok változásait Európában.
             </p>
         </div>
         <figure id="Terkep"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
@@ -61,21 +76,18 @@
 
     <section>
         <div class="chart-description">
-            <h2>Section B: MASODIK</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using the basic chart from the previous session.
+            <h2>Adatok éves bontásban</h2>
+            <p> Az adatok bemutatják a söripar alakulását. Megfigyelhető a COVID-19 járvány hatása és az azt követő helyreállás.
             </p>
         </div>
         <figure id="Oszlop"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Line"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
     <section>
         <div class="chart-description">
-            <h2>Section C: HARMADIK</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using the basic chart from the previous session.
+            <h2>Összehasonlítás</h2>
+            <p> Az ábra segítségével vizuálisan vizsgálhatjuk, hogy van-e korreláció a kiválasztott mutatók között. Például a termelést és fogyasztást kiválasztva láthatjuk, hogy azok az országok, ahol magas a sörfogyasztás, általában több sört is termelnek-e.
             </p>
         </div>
         <figure id="Compare"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
@@ -83,10 +95,8 @@
 
     <section>
         <div class="chart-description">
-            <h2>Section D: NEGYEDIK</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using the basic chart from the previous session.
+            <h2>A helyszíni fogyasztás és bolti értékesítás megoszlása</h2>
+            <p> Az adatok alapján megfigyelhetők a sörfogyasztási szokások trendjei, például az európai országok többsége a nem preferálja a helyszíni fogyasztást.
             </p>
         </div>
         <figure id="Onoff"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
@@ -94,36 +104,15 @@
     
     <section>
         <div class="chart-description">
-            <h2>EXPORT</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using the basic chart from the previous session.
+            <h2>Export és import</h2>
+            <p> Az export és import adatok rámutatnak az európai sörök nemzetközi piacra gyakorolt hatásaira.
             </p>
         </div>
         <figure id="Export"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>IMPORT</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using the basic chart from the previous session.
-            </p>
-        </div>
         <figure id="Import"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
-    <section>
-        <div class="chart-description">
-            <h2>LINE</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using the basic chart from the previous session.
-            </p>
-        </div>
-        <figure id="Line"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+    
 
 
 

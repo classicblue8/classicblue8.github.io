@@ -6,16 +6,16 @@
     },
     "mark": {"type": "bar", "stack": "normalize"},
     "encoding": {
-      "x": {"field": "id", "type": "ordinal", "title": "ID", "sort": {"field": "value", "op": "sum", "order": "descending"}},
+      "x": {"field": "id", "type": "ordinal", "title": "Ország", "sort": {"field": "value", "op": "sum", "order": "descending"}},
       "y": {"aggregate": "sum", "field": "value", "title": "Mennyiség"},
       "color": {
         "field": "variable",
         "type": "nominal",
-        "scale": {"range": ["#1f77b4", "#ff7f0e"]},
+        "scale": {"range": ["#0096FF", "#ff5722"]},
         "legend": {"title": "Type of Export"}
       },
       "tooltip": [
-        {"field": "id", "title": "ID"},
+        {"field": "id", "title": "Ország"},
         {"field": "variable", "title": "Export"},
         {"field": "sum_value", "title": "Mennyiség"}
       ]
