@@ -76,7 +76,7 @@
     "subtitleFont": "Arial",
     "subtitleFontWeight": "lighter"
   },
-  "width": 700,
-  "height": 500,
+  "width": 655,
+  "height": 655,
   "config": {"view": {"stroke": "transparent"}}
 }
