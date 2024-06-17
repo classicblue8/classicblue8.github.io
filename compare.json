@@ -15,7 +15,9 @@
           "Production",
           "Cons_Capita",
           "Nr_Breweries",
-          "Excise_Duty"],
+          "Excise_Duty",
+          "Import",
+          "Export"],
         "name": "X tengely: "
       }
     },
@@ -29,7 +31,9 @@
           "Production",
           "Cons_Capita",
           "Nr_Breweries",
-          "Excise_Duty"],
+          "Excise_Duty",
+          "Import",
+          "Export"],
         "name": "Y tengely: "
       }
     }

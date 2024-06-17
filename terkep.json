@@ -29,7 +29,11 @@
           "Employment",
           "Consumption",
           "Production",
-          "Cons_Capita","Nr_Breweries", "Excise_Duty",
+          "Cons_Capita",
+          "Nr_Breweries",
+          "Excise_Duty",
+          "Import",
+          "Export",
           "Year"
         ]
       }
@@ -43,7 +47,16 @@
       "value": "Employment",
       "bind": {
         "input": "select",
-        "options": ["Employment", "Consumption", "Production", "Cons_Capita","Nr_Breweries", "Excise_Duty"],
+        "options": [
+          "Employment",
+          "Consumption",
+          "Production",
+          "Cons_Capita",
+          "Nr_Breweries",
+          "Excise_Duty",
+          "Import",
+          "Export"
+        ],
         "name": "Adat kiválasztása: "
       }
     }
@@ -54,12 +67,7 @@
       "legend": {"title": null},
       "field": "selectedMetric",
       "scale": {
-        "range": [
-          "rgb(0, 150, 255)",
-          "rgb(80, 242, 179)",
-          
-          "rgb(235, 61, 75)"
-        ]
+        "range": ["rgb(0, 150, 255)", "rgb(80, 242, 179)", "rgb(235, 61, 75)"]
       },
       "type": "quantitative"
     },
