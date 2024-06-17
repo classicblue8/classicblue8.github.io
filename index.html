@@ -1,53 +1,26 @@
-<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
-<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
-<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
-<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
-
-<!-- Take a look around and make your own copy to adapt for your own use. -->
-
-<!-- This is a comment -->
-<!-- Comments are not displayed in the browser -->
-<!-- They can be used to leave notes in the code -->
 
 <!DOCTYPE html>
-<html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
-    Each tag does something different. For example:
-        - The <html> tag defines the whole document.
-        - The <h1> tag defines a large heading
-        - The <p> tag defines a paragraph
-        - Tags appear as an opening <div> and closing </div> pair
-    -->
+<html>
 
 <head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
-
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
     <link rel="stylesheet" type="text/css" href="s2_example1.css">
-    <title>A sör Európában</title> <!-- The title displayed in the browser tab, not on the page itself -->
-
-    <!-- This is a link to the vega-lite which we're using to make graphs -->
+    <title>A sör Európában</title> 
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
 <body> 
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
+    <h1 class="big" style="margin-bottom: 0px;"> 
         Európai sörtrendek
     </h1>
     <p style="margin-top: 0px; color: darkblue">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
         Ördög Krisztián
     </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
+    <h3 class="small"> 
         A projekt célja az európai sörtrendek elemzése és bemutatása a legfrissebb statisztikai adatok alapján. Ez magában foglalja a sörtermelés, fogyasztás, fogyasztás/fő, export-import, jövedéki adók és a sörfőzdék számának alakulását 2016 és 2022 között, különös tekintettel a 2022-es évre.
     </h3>
 
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
     <section>
         <div class="chart-description">
             <h2>Felhasznált adatok</h2>
@@ -74,7 +47,7 @@
                 A projekt hasznos lehet sörkedvelőknek, az iparág iránt érdeklődőknek, amely által megérthetik a söripar jelenlegi helyzetét, a piaci trendeket, valamint a sörfogyasztási szokások és termelési adatok változásait Európában.
             </p>
         </div>
-        <figure id="Terkep"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Terkep"></figure> 
     </section>
 
     <section>
@@ -83,8 +56,8 @@
             <p> Az adatok bemutatják a söripar alakulását. Megfigyelhető a COVID-19 járvány hatása és az azt követő helyreállás.
             </p>
         </div>
-        <figure id="Oszlop"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        <figure id="Line"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Oszlop"></figure> 
+        <figure id="Line"></figure> 
     </section>
 
     <section>
@@ -93,7 +66,7 @@
             <p> Az ábra segítségével vizuálisan vizsgálhatjuk, hogy van-e korreláció a kiválasztott mutatók között. Például a termelést és fogyasztást kiválasztva láthatjuk, hogy azok az országok, ahol magas a sörfogyasztás, általában több sört is termelnek-e.
             </p>
         </div>
-        <figure id="Compare"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Compare"></figure> 
     </section>
 
     <section>
@@ -102,7 +75,7 @@
             <p> Az adatok alapján megfigyelhetők a sörfogyasztási szokások trendjei, például az európai országok többsége a nem preferálja a helyszíni fogyasztást.
             </p>
         </div>
-        <figure id="Onoff"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Onoff"></figure> 
     </section>
     
     <section>
@@ -111,24 +84,11 @@
             <p> Az export és import adatok rámutatnak az európai sörök nemzetközi piacra gyakorolt hatásaira.
             </p>
         </div>
-        <figure id="Export"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        <figure id="Import"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Export"></figure> 
+        <figure id="Import"></figure> 
     </section>
 
-    
-
-
-
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
-
-
-    <!-- This is a script, it's a way to run JavaScript code on the page -->
     <script>
-        // This is a comment in JavaScript - it's a different language to HTML and CSS
-
        
         var figure_7_spec = "terkep.json";
         var figure_8_spec = "oszlop.json";
@@ -138,7 +98,6 @@
         var figure_12_spec = "import.json";
         var figure_13_spec = "line.json";
 
-       
         vegaEmbed('#Terkep', figure_7_spec)
         vegaEmbed('#Oszlop', figure_8_spec)
         vegaEmbed('#Compare', figure_9_spec)
@@ -146,13 +105,6 @@
         vegaEmbed('#Export', figure_11_spec)
         vegaEmbed('#Import', figure_12_spec)
         vegaEmbed('#Line', figure_13_spec)
-
-
-        // Do you want to add more graphs?
-        // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
-        // e.g. 
-        // var figure_3_spec = ...
-        // vegaEmbed('#Location3', figure_3_spec)
 
     </script>
 
